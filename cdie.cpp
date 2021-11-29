@@ -12,7 +12,7 @@
 using namespace std;
 
 
-/** CDie::Draw
+/**  CDie::Draw
  *  A function to draw a single die to standard out
  * Draws based on condition of the face value of the die
  * 

@@ -1,9 +1,9 @@
-// ============================================================================
-// File: cdiceplayer.h (Spring 2020)
-// ============================================================================
-// This is the header file for the CDicePlayer class, which is used to
-// represent an individual rolling a pair of dice.
-// ============================================================================
+/**
+ * File: cdiceplayer.h (Spring 2020)
+ *
+ * This is the header file for the CDicePlayer class, which is used to
+ * represent an individual pair of rolling dice.
+ */
 
 #ifndef CDICEPLAYER_H
 #define CDICEPLAYER_H
@@ -16,7 +16,7 @@
 const   int     DEFAULT_NUM_DICE = 2;
 const   int     MAX_NUM_DICE = 100;
 
-// class declaration
+// Class declaration
 class   CDicePlayer
 {
 public:
@@ -36,10 +36,9 @@ public:
     void    ShowDice()const;  // displays the dice
 
 private:
-    int     m_numDice;  // number of dice entered
-    // likely dimension of array
-    int     m_numRolls;  // number of rolls done
-    int     m_score;  // the score
+    int     m_numDice;
+    int     m_numRolls;
+    int     m_score;
     CDie    m_dice[MAX_NUM_DICE];
 };
 

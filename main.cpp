@@ -1,20 +1,20 @@
-// ============================================================================
-// File: main.cpp (Spring 2020)
-// ============================================================================
-// Programmer: Florentino Becerra
-// Date: 05/14/2020
-// Revised: 05/16/2020
-// Class: Intro To Programming Using C++
-// Project: CDicePlayer
-// ============================================================================
-// This program is a simple dice game that allows the player to repeatedly roll
-// one or more dice to accumulate a total number of points without exceeding a
-// limit of 100. The player at the keyboard is prompted to enter the number of
-// dice to play with, and that value is then used to create a CDicePlayer
-// object, which is then used to allow the player to play the game. The game is
-// over when either the player decides to stop rolling dice, or the limit is
-// exceeded.
-// ============================================================================
+/**
+ * File: main.cpp (Spring 2020)
+ * 
+ * Programmer: F. Becerra
+ * Date: 05/14/2020
+ * Revised: 05/16/2020
+ * Class: Intro To Programming Using C++
+ * Project: CDicePlayer
+ * 
+ * This program is a simple dice game that allows the player to repeatedly roll
+ * one or more dice to accumulate a total number of points without exceeding a
+ * limit of 100. The player at the keyboard is prompted to enter the number of
+ * dice to play with, and that value is then used to create a CDicePlayer
+ * object, which is then used to allow the player to play the game. The game is
+ * over when either the player decides to stop rolling dice, or the limit is
+ * exceeded.
+ */
 
 #include    <iostream>
 #include    <cstdlib>
@@ -28,10 +28,6 @@ void    EvaluateScore(const CDicePlayer  &player);
 // defined constants
 const   int     MAX_POINTS = 100;
 
-
-// ==== main ==================================================================
-//
-// ============================================================================
 
 int     main()
 {
@@ -111,22 +107,22 @@ int     main()
 }  // end of "main"
 
 
-// ==== EvaluateScore =========================================================
-//
-// This function is used at the end of the game to evaluate the player's final
-// score and display a summary.
-//
-// Input:
-//      player [IN]  -- a const reference to a CDicePlayer object
-//
-// Output:
-//      Nothing
-//
-// ============================================================================
+/**  EvaluateScore
+ * 
+ * This function is used at the end of the game to evaluate the player's final
+ * score and display a summary.
+ * 
+ * Input:
+ *      player [IN]  -- a const reference to a CDicePlayer object
+ * 
+ * Output:
+ *      Nothing
+ * 
+ */
 
 void    EvaluateScore(const CDicePlayer&  player)
 {
-    // display the final points for the player and evaluate their performance
+
     cout << "\nGame over!" << endl;
     cout << "With " << player.GetNumRolls();
     cout << " turns, your score is ";
