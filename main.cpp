@@ -3,7 +3,7 @@
  * 
  * Programmer: F. Becerra
  * Date: 05/14/2020
- * Revised: 05/16/2020
+ * Revised: 11/29/2020
  * Class: Intro To Programming Using C++
  * Project: CDicePlayer
  * 
@@ -32,6 +32,7 @@ const   int     MAX_POINTS = 100;
 int     main()
 {
     int diceVal;
+    int diceRepVal;
 
     // Welcome the player to the game
     cout << "Welcome to the dice rolling game. \n";
@@ -54,11 +55,29 @@ int     main()
         exit(EXIT_FAILURE);
         }
 
+    cout << "\nHow do you wish for the dice to be displayed?\n";
+    cout << "Enter 1 for visual dice or 2 for just dice numbers to be displayed:  ";
+    if ( !(cin >> diceRepVal) )
+        {
+        cout << "\nAttention: Error getting input." << endl;
+        exit(EXIT_FAILURE);
+        }
+    else if (diceRepVal >= 3)
+        {
+        cout << "\nWarning: Invalid option chosen. Exiting for now..." << endl;
+        exit(EXIT_FAILURE);
+        }
+    else
+        {
+        cout << "\nAttention: Unexpected value chosen. Exiting game..." << endl;
+        exit(EXIT_FAILURE);
+        }
+
     // Create the dice player object, passing the number of dice to play with
     // as an argument to the constructor
     CDicePlayer player(diceVal);
     player.RollDice();
-    player.ShowDice();
+    player.ShowDice(diceRepVal);
 
     // loop and play the game...
     do
@@ -88,7 +107,7 @@ int     main()
         if (response == 'Y')
         {
             player.RollDice();
-            player.ShowDice();
+            player.ShowDice(diceRepVal);
             }
         else
             {

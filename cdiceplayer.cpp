@@ -56,20 +56,31 @@ void    CDicePlayer::RollDice()
  * A function to show the player's dice to the screen
  * based on the user's number of dice, provided it is less than
  * the limit of allowed dice in the game
+ * An integer value is passed to indicate how the function will display the dice to the player
  * 
- * Input: Nothing
+ * Input:
+ * displayChoice [IN]: An integer value representing how the dice should be displayed during gameplay
  * Output: Void
  * The function just prints the dice to the screen
  */
 
-void    CDicePlayer::ShowDice()const
+void    CDicePlayer::ShowDice(int displayChoice)const
 {
     // loop through and show each die
 
-    for (int index = 0; index < m_numDice; ++index)
+    if (displayVal == 1)
         {
-        m_dice[index].Draw();
-        m_dice[index].PrintDieVal();
+        for (int index = 0; index < m_numDice; ++index)
+            {
+            m_dice[index].Draw();
+            }
+        }
+    else if (displayVal == 2)
+        {
+        for (int index = 0; index < m_numDice; ++index)
+            {
+            m_dice[index].PrintDieVal();
+            }
         }
 
 }  // End of "CDicePlayer::ShowDice"

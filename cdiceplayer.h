@@ -33,7 +33,7 @@ public:
     int     GetNumRolls()const { return m_numRolls; }  // how many times rolled
     int     GetScore()const { return m_score; }
     void    RollDice();  // randomizes the roll
-    void    ShowDice()const;  // displays the dice
+    void    ShowDice(int displayChoice)const;
 
 private:
     int     m_numDice;
