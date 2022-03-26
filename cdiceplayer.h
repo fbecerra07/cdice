@@ -1,5 +1,5 @@
 /**
- * File: cdiceplayer.h (Spring 2020)
+ * File: cdiceplayer.h
  *
  * This is the header file for the CDicePlayer class, which is used to
  * represent an individual pair of rolling dice.
@@ -21,7 +21,7 @@ class   CDicePlayer
 {
 public:
     // constructors
-    CDicePlayer(int  numDice = DEFAULT_NUM_DICE)
+    CDicePlayer(int numDice = DEFAULT_NUM_DICE)
                  {
                  srand(time(NULL));  // seed the randomization
                  m_score = m_numRolls = 0;  // default value

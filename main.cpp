@@ -1,7 +1,7 @@
 /**
  * File: main.cpp (Spring 2020)
  * 
- * Programmer: F. Becerra
+ * Programmer: Florentino Becerra
  * Date: 05/14/2020
  * Revised: 11/29/2020
  * Class: Intro To Programming Using C++
@@ -55,22 +55,25 @@ int     main()
         exit(EXIT_FAILURE);
         }
 
-    cout << "\nHow do you wish for the dice to be displayed?\n";
-    cout << "Enter 1 for visual dice or 2 for just dice numbers to be displayed:  ";
-    if ( !(cin >> diceRepVal) )
-        {
-        cout << "\nAttention: Error getting input." << endl;
-        exit(EXIT_FAILURE);
+    while ( !(cin >> diceRepVal) )
+       {
+        cout << "\nHow do you wish for the dice to be displayed?\n";
+        cout << "Enter 1 for visual dice or 2 for just dice numbers to be displayed:  ";
         }
-    else if (diceRepVal >= 3)
+
+    switch(diceRepVal)
         {
-        cout << "\nWarning: Invalid option chosen. Exiting for now..." << endl;
-        exit(EXIT_FAILURE);
-        }
-    else
-        {
-        cout << "\nAttention: Unexpected value chosen. Exiting game..." << endl;
-        exit(EXIT_FAILURE);
+
+        case 1:
+            cout << "\nYour selection:  Visual dice." << endl;
+
+        case 2:
+            cout << "\nYour selection:  Text-representation selected." << endl;
+
+        default:
+            cout << "\nInvalid selection..." << endl;
+            exit(EXIT_FAILURE);
+
         }
 
     // Create the dice player object, passing the number of dice to play with

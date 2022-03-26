@@ -1,6 +1,6 @@
 /**
  * File: cdie.cpp
- * Programmer: F. Becerra
+ * Programmer: Florentino Becerra
  * 
  * Description:
  * Implementation of the CDie class
@@ -17,6 +17,7 @@ using namespace std;
  * Draws based on condition of the face value of the die
  * 
  * Input: Nothing
+ * 
  * Output: Nothing, it just draws the die based on condition
  */
 
@@ -126,6 +127,7 @@ void    CDie::PrintDieVal()const
  * This will be the dice's face value
  * 
  * Input: Nothing
+ * 
  * Output: Nothing, it just updates the die's face value
  */
 

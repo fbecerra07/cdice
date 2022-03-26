@@ -1,7 +1,7 @@
 /**
  * File: cdiceplayer.cpp
  * 
- * Programmer: F. Becerra
+ * Programmer: Florentino Becerra
  * Date: 05/14/2020
  * Revised: 05/16/2020
  * Class: Intro To Programming Using C++
@@ -57,9 +57,12 @@ void    CDicePlayer::RollDice()
  * based on the user's number of dice, provided it is less than
  * the limit of allowed dice in the game
  * An integer value is passed to indicate how the function will display the dice to the player
+ * whether that is a lame visual or simply
+ * a set of dice face values as text
  * 
  * Input:
  * displayChoice [IN]: An integer value representing how the dice should be displayed during gameplay
+ * 
  * Output: Void
  * The function just prints the dice to the screen
  */
